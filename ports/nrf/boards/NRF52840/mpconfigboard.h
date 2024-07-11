@@ -39,15 +39,17 @@
 #define MICROPY_PY_MACHINE_TEMP     (1)
 
 #define MICROPY_HW_USB_CDC          (1) //very important to get USB-Serial to work
-#define MICROPY_HW_USB_VID          (0x2886)
-#define MICROPY_HW_USB_PID          (0x0045)
+//#define MICROPY_HW_USB_VID          (0x2886)
+//#define MICROPY_HW_USB_PID          (0x0045)
 #define MICROPY_HW_USB_CDC_1200BPS_TOUCH (1)
 
 #define MICROPY_HW_ENABLE_RNG       (1)
+//#define MICROPY_HW_HAS_FLASH        (1)
+//#define QSPI_FLASH_FILESYSTEM       (1)
 
 #define MICROPY_HW_NEOPIXEL         (16)
 
-#define BOARD_HAS_CRYSTAL 1
+//#define BOARD_HAS_CRYSTAL 1
 
 #if QSPI_FLASH_FILESYSTEM
 #define MICROPY_QSPI_DATA0          (17)
