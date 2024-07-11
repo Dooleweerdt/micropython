@@ -324,7 +324,7 @@ $(filter $(PY_BUILD)/../extmod/vfs_fat_%.o, $(PY_O)): COPT += -Os
 ifeq ($(MCU_VARIANT), nrf91)
 all: binary hex secureboot
 else
-all: binary hex
+all: binary hex uf2
 endif
 
 OUTPUT_FILENAME = firmware
@@ -340,6 +340,13 @@ hex: $(BUILD)/$(OUTPUT_FILENAME).hex
 
 $(BUILD)/$(OUTPUT_FILENAME).hex: $(BUILD)/$(OUTPUT_FILENAME).elf
 	$(OBJCOPY) -O ihex $< $@
+
+### Create a .uf2 file from the .hex file
+uf2: $(BUILD)/$(OUTPUT_FILENAME).uf2
+
+$(BUILD)/$(OUTPUT_FILENAME).uf2: $(BUILD)/$(OUTPUT_FILENAME).hex
+	$(ECHO) "Create $@"
+	$(PYTHON3) $(TOP)/tools/uf2conv.py -f 0xADA52840 -c -o "$(BUILD)/$(OUTPUT_FILENAME).uf2" $^
 
 FLASHER ?= jlink
 
