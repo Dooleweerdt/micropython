@@ -1,0 +1,5 @@
+include("$(PORT_DIR)/modules/manifest.py")
+require("ds18x20")
+require("ssd1306")
+require("aioble")
+freeze("./modules")
