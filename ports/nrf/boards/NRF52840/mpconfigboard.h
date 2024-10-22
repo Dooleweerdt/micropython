@@ -31,13 +31,14 @@
 
 #define MICROPY_PY_MACHINE_UART     (1)
 #define MICROPY_PY_MACHINE_HW_PWM   (1)
-//#define MICROPY_PY_MACHINE_HW_SPI   (1)
-//#define MICROPY_PY_MACHINE_TIMER    (1)
+#define MICROPY_PY_MACHINE_HW_SPI   (1)
 #define MICROPY_PY_MACHINE_RTCOUNTER (1)
 #define MICROPY_PY_MACHINE_I2C      (1)
 #define MICROPY_PY_MACHINE_ADC      (1)
 #define MICROPY_PY_MACHINE_TEMP     (1)
+#define MICROPY_PY_FRAMEBUF         (1)
 
+#define MICROPY_HW_ENABLE_USBDEV        (1)
 #define MICROPY_HW_USB_CDC          (1) //very important to get USB-Serial to work
 //#define MICROPY_HW_USB_VID          (0x2886)
 //#define MICROPY_HW_USB_PID          (0x0045)
@@ -48,8 +49,6 @@
 //#define QSPI_FLASH_FILESYSTEM       (1)
 
 #define MICROPY_HW_NEOPIXEL         (16)
-
-//#define BOARD_HAS_CRYSTAL 1
 
 #if QSPI_FLASH_FILESYSTEM
 #define MICROPY_QSPI_DATA0          (17)
