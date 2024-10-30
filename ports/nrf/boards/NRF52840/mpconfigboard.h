@@ -38,7 +38,7 @@
 #define MICROPY_PY_MACHINE_TEMP     (1)
 #define MICROPY_PY_FRAMEBUF         (1)
 
-#define MICROPY_HW_ENABLE_USBDEV        (1)
+#define MICROPY_HW_ENABLE_USBDEV    (1)
 #define MICROPY_HW_USB_CDC          (1) //very important to get USB-Serial to work
 //#define MICROPY_HW_USB_VID          (0x2886)
 //#define MICROPY_HW_USB_PID          (0x0045)
